@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do list</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="box" id="heading"><h1><%= listTitle %></h1></div>
+	<div class="box">
+		<%newListItems.forEach((items) => {{%>
+		<div class="item">
+		<input type="checkbox">	
+		  <p><%= items.name %></p>
+	    </div>
+	<%});%>
+<form action="/" method="post" class="item">
+    	<label for="addAToDoList">To do: </label>
+    		<input type="text" name="newItem" placeholder="addAToDoList" autocomplete="off" required>
+    	<button type="submit" name="list" value= <%= listTitle %> >+</button>
+    </form>
+    </div>
+    
+   
+</body>
+</html>
