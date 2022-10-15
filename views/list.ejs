@@ -3,9 +3,11 @@
 <head>
 	<title>To Do list</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="box" id="heading"><h1><%= listTitle %></h1></div>
+	<div class="container">
 	<div class="box">
 		<%newListItems.forEach((items) => {%>
 	  <form form action="/delete" method="post">
@@ -21,6 +23,7 @@
     		<input type="text" name="newItem" placeholder="addAToDoList" autocomplete="off" required>
     	<button type="submit" name="list" value= <%= listTitle %> >+</button>
     </form>
-    </div>   
+    </div> 
+    </div>  
 </body>
 </html>
